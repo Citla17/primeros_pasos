@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" type="text/css" href="tdp_style.css">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap" rel="stylesheet"> 
+        </head>
+        <body>
+            <nav id="navbar">
+                <header id="header_nav">
+                    Manual CSS
+                </header>
+                <ul>
+                    <li><a href="#Selectores" class="nav-link">Selectores</a></li>
+                    <li><a href="#Modelo_Box" class="nav-link">Modelo Box</a></li>
+                    <li><a href="#Position" class="nav-link">Position</a></li>
+                    <li><a href="#Float" class="nav-link">Float</a></li>
+                    <li><a href="#Combinators" class="nav-link">Combinators</a></li>
+                </ul>
+            </nav>
+            <main id="main-doc">
+                <section class="main-section" id="Selectores">
+                    <header class="header_content">Selectores</header>
+                    <article>
+                        <p>
+                            Un selector en CSS te permite elegir el elemento HTML al que le quieres dar estilo. Las categorías en las que se dividen los selectores son las siguientes:
+                        </p>
+                        <ul>
+                            <li>Selectores simples: seleccionan el elemento con base en su id, clase o nombre.</li>
+                            <li>Selectores combinados: seleccionan elementos basados en una relación específica entre ellos.</li>
+                            <li>Pseudoclases: seleccionan elementos basados en un cierto estado.</li>
+                            <li>Pseudoelementos: seleccionan una parte del elemento.</li>
+                            <li>Selectores de atributo: seleccionan basados en un atributo o en el valor de un atributo.</li>
+                        </ul>
+                        <p>
+                            Cuando 2 o más elementos comparten el mismo estilo pueden agruparse para ahorrar código. En el siguiente ejemplo el mismo estilo se aplicará a los elementos h1, h2 y p.
+                        </p>
+                        <code>
+                            h1, h2, p {<br>
+                                text-align: center;<br>
+                                color: red;<br>
+                            }
+                        </code>
+                    </article>
+                </section>
+                <section class="main-section" id="Modelo_Box">
+                    <header class="header_content">Modelo Box</header>
+                    <article>
+                        <p>
+                            Todos los elementos del código HTML pueden ser considerados cajas y se usa el modelo box de CSS para estilizar dichas cajas.
+                            Cada caja tiene las siguientes partes:
+                        </p>
+                        <ul>
+                            <li>Contenido: Zona donde el texto y las imágenes aparecen.</li>
+                            <li>Padding: Espacio transparente alrededor del contenido.</li>
+                            <li>Border: Espacio que rodea el contenido con su padding.</li>
+                            <li>Margin: Línea que delimita la caja del resto de los elementos.</li>
+                        </ul>
+                        <p>
+                            El ancho total de un elemento se calcula sumando el ancho de todas las partes de la caja. En el siguiente ejemplo el contenido tiene un ancho de 320px, el padding de 10 px (sumando padding derecho e izquierdo), el borde de 10px (sumando borde derecho e izquierdo) y el margen de 0px por lo que el ancho total de la caja del elemento div es de 350px.
+                        </p>
+                        <code>
+                            div {<br>
+                            width: 320px;<br>
+                            padding: 10px;<br>
+                            border: 5px solid gray;<br>
+                            margin: 0;<br>
+                          }
+                        </code>
+                    </article> 
+                </section>
+                <section class="main-section" id="Position">
+                    <header class="header_content">Position</header>
+                    <article>
+                        <p>
+                            La propiedad de posición especifica el método de posicionamiento que se utiliza para un elemento. Existen 5 métodos de posicionamiento:
+                        </p>
+                        <ul>
+                            <li>Static: Es el método por default, el elemento está siempre posicionado de acuerdo al flujo normal de la página.</li>
+                            <li>Relative: El elemento está posicionado en relación a posición normal. Se pueden usar ajustar los valores top, left, right y bottom para mover el elemento desde su posición original. Otro contenido no se ajustará para entrar en el espacio dejado por este elemento. </li>
+                            <li>Fixed: El elemento está posicionado en relación con la ventana gráfica lo que significa que permanece en la misma posición aún si la página se desplaza. Se pueden usar ajustar los valores top, left, right y bottom para mover el elemento.</li>
+                            <li>Absolute: El elemento está posicionado en relación al antepasado más cercano, si no existe uno se posicionará en relación al cuerpo del html y se moverá junto a la pagina cuando ésta se desplaza. Estos elementos se remueven del flujo normal del documento por lo que pueden superponerse a otros elementos.</li>
+                            <li>Sticky: El elemento está posicionado en relación a la posición del usuario cuando se desplaza por la ventana.</li>
+                        </ul>
+                        <p>
+                            La posición se especifica como se muestra en el siguiente ejemplo donde el elemento div tiene una posición fija en la parte inferior de la ventana.
+                        </p>
+                        <code>
+                            div.fixed {<br>
+                                position: fixed;<br>
+                                bottom: 0;<br>
+                                right: 0;<br>
+                                width: 300px;<br>
+                                border: 3px solid #73AD21;<br>
+                              }
+                        </code>
+                    </article>
+                </section>
+                <section class="main-section" id="Float">
+                    <header class="header_content">Float</header>
+                    <article>
+                        <p>
+                        La propiedad float especifica como debe flotar un elemento, la propiedad clear espeifica cómo se comporta el elemento que rodea al elemento con la propiedad float.
+                        La propiedad float se utiliza para posicionar y dar formato al contenido y puede tener los siguientes valores: 
+                        </p>
+                        <ul>
+                            <li>left: el elemento flota a la izquierda de su contenedor.</li>
+                            <li>right: el elemento flota a la derecha de su contenedor.</li>
+                            <li>none: el elemento no flota, si no que se muestra tal y como se ubica en el texto.</li>
+                            <li>inherit: el elemento hereda el valor de su elemento padre.</li>
+                        </ul>
+                        <p>
+                            En el siguiente ejemplo, los 3 elementos div flotarán uno a lado del otro.
+                        </p>
+                        <code>
+                            div {<br>
+                                float: left;<br>
+                                padding: 15px;<br>
+                            }<br>
+                            .div1 {<br>
+                                background: red;<br>
+                            }<br>
+                            .div2 {<br>
+                                background: yellow;<br>
+                            }<br>
+                            .div3 {<br>
+                                background: green;<br>
+                            }<br>
+                        </code>
+                    </article>
+                </section>
+                <section class="main-section" id="Combinators">
+                    <header class="header_content">Combinators</header>
+                    <article>
+                        <p>
+                            Son elementos que explican la relación entre dos elementos. Hay 4 diferentes:
+                        </p>
+                        <ul>
+                            <li>Descendiente (espacio): Selecciona todos los elementos que descienden del elemento especificado.</li>
+                            <li>Hijo (>): Selecciona todos los elementos hijos del elemento especificado.</li>
+                            <li>Hermano adyacente (+): Selecciona el elemento adyacente a un elemento especificado</li>
+                            <li>Hermano general (~): Selecciona todos los elementos hermanos que se encuentran a continuación del elemento especificado.</li>
+                        </ul>
+                        <p>
+                            En el siguiente ejemplo todos los elementos p que se encuentren en seguida del elemento div tendran un fondo color amarillo.
+                        </p>
+                        <code>
+                            div ~ p {<br>
+                                background-color: yellow;<br>
+                            }<br>
+                        </code>
+                    </article>
+                </section>
+            </main>
+        </body>
+    </html>

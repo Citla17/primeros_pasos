@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: Roboto Serif, Arial, Helvetica, sans-serif;
+}
+#navbar {
+    color: white;
+    position: fixed;
+    min-width: 200px;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 100%;
+    border-right: solid 2px white;
+    background-color: #01579b;
+  }
+#header_nav {
+    margin: 10px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: thin;
+  }
+#navbar ul {
+    height: 88%;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+#navbar li {
+    color: white;
+    border-top: 1px solid;
+    list-style: none;
+    position: relative;
+    width: 100%;
+  }
+  
+#navbar a {
+    display: block;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #navbar a:link{
+    color:white;
+  }
+  #navbar a:visited{
+    color: #a8d1f8;
+  }
+  #navbar a:hover{
+    background-color: aqua;
+    color: black;
+  }
+main{
+    color: black;
+    background-color: white;
+    font-size: 2rem;
+    line-height: 1.5;
+    position: absolute;
+    margin-left: 202px;
+    padding-left: 1rem;s
+}
+.header_content{
+    font-size: 2rem;
+    font-weight: 600;
+    padding 10px;
+    margin: 20px 10px 10px 10px;
+}
+p{
+    font-size: 1.3rem;
+}
+section article{
+    color: black;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+section ul{
+    margin: 10px 0 10px 20px;
+}
+section li{
+    font-size: 1.3rem;
+}
+code{
+    display: block;
+    height: auto;
+    font-family: monospace;
+    font-size: 1.3rem;
+    margin: 20px 10px 20px 10px;
+    padding: 10px;
+    background-color: #c4def6;
+    max-width: 70%;
+}
+@media only screen and (max-width: 815px){
+    #navbar {
+        background-color: #01579b;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        max-height: 196px;
+        z-index: 1;
+        border-bottom: solid 2px navy;
+    }  
+    main{
+        position: relative;
+        margin-left: 0px;
+        margin-top: 205px;
+    }
+}
